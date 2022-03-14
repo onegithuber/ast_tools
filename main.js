@@ -13,7 +13,7 @@ const common_fix = require('./pro/demo1_fix')
 
 
 const source_path = './demos/demo1/source.js'
-const output_path = './demos/demo1/output.js'
+const output_path = './demos/demo1/output3.js'
 const content = fs.readFileSync(source_path, {encoding: 'binary'});
 const buf = new Buffer.from(content, 'binary');
 const source_code = iconv.decode(buf, 'utf-8');

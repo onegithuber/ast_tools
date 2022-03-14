@@ -55,7 +55,14 @@ function fix(source_code) {
         traverse(ast, ConditionalFix.fix)
 
     }
-
+    const opts = {
+        indent: {
+            adjustMultilineComment: true,
+            style: "        ",
+            base: 0
+        }
+    }
+    return generator(ast, opts).code
     traverse(ast, UnaryFunctionFix.fix)
 
 
@@ -67,7 +74,7 @@ function fix(source_code) {
     traverse(ast, ReserveStrFix.fix)
     // traverse(ast, deleteExtraVar.fix)
 
-    const opts = {
+    opts = {
         indent: {
             adjustMultilineComment: true,
             style: "        ",
