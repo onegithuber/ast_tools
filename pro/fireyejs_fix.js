@@ -58,9 +58,7 @@ function fix(source_code) {
         traverse(ast, ConditionalFix.fix)
 
     }
-    // return generator(ast).code
     traverse(ast, UnaryFunctionFix.fix)
-
     traverse(ast, ControlFlowFix.fix)
     return generator(ast).code
     //

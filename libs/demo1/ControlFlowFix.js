@@ -561,7 +561,6 @@ function fix(path) {
                                     break
                                 }
                             }
-
                             control_param_value = undefined
                             if (stack.length > 0) {
                                 let alternate_node = stack.pop()

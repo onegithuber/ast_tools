@@ -12,13 +12,11 @@ const iconv = require('iconv-lite');
 const common_fix = require('./pro/fireyejs_fix')
 
 
-const source_path = './demos/demo1/source.js'
-const output_path = './demos/demo1/source_fix_out.js'
+const source_path = './demos/demo1/fireyejs.js'
+const output_path = './demos/demo1/fireyejs_fix_out.js'
 const content = fs.readFileSync(source_path, {encoding: 'binary'});
 const buf = new Buffer.from(content, 'binary');
 const source_code = iconv.decode(buf, 'utf-8');
-
-
 
 const start_time = new Date().getTime()
 const output_ast = common_fix.fix(source_code)
